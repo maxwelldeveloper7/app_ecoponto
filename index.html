@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPonto - Aprenda. Separe. Recicle.</title>
+    <link rel="stylesheet" href="./css/style.css"">
+</head>
+<body>
+    <!-- TELA INICIAL -->
+    <div id="telaInicial" class="tela ativa">
+        <div class="container-inicial">
+            <div class="simbolo-reciclagem">♻️</div>
+            <h1>EcoPonto</h1>
+            <p class="slogan">Aprenda. Separe. Recicle.</p>
+            <button class="btn-primario" onclick="irPrincipal()">Começar</button>
+        </div>
+    </div>
+
+    <!-- TELA PRINCIPAL -->
+    <div id="telaPrincipal" class="tela">
+        <div class="container-principal">
+            <h2>O que deseja fazer?</h2>
+            <div class="opcoes-principais">
+                <button class="opcao" onclick="irAprender()">
+                    <span class="icone-grande">♻️</span>
+                    <span>Aprender</span>
+                </button>
+                <button class="opcao" onclick="irJogo()">
+                    <span class="icone-grande">🎮</span>
+                    <span>Jogo</span>
+                </button>
+                <button class="opcao desabilitado" disabled>
+                    <span class="icone-grande">🗺️</span>
+                    <span>Mapa (em breve)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MÓDULO APRENDER -->
+    <div id="moduloAprender" class="tela">
+        <div class="conteudo-aprender">
+            <div id="slides-aprender"></div>
+            <div class="navegacao-slides">
+                <button id="btnAnterior" class="btn-nav" onclick="anterior()">← Anterior</button>
+                <span id="indicadorSlide"></span>
+                <button id="btnProximo" class="btn-nav" onclick="proximo()">Próximo →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MÓDULO JOGO -->
+    <div id="moduloJogo" class="tela">
+        <div class="container-jogo">
+            <div id="conteudo-jogo"></div>
+        </div>
+    </div>
+
+    <!-- MENU DE NAVEGAÇÃO INFERIOR -->
+    <nav class="menu-inferior">
+        <button class="menu-btn" onclick="irPrincipal()" title="Início">
+            <span class="menu-icone">🏠</span>
+            <span class="menu-texto">Início</span>
+        </button>
+        <button class="menu-btn" onclick="irAprender()" title="Aprender">
+            <span class="menu-icone">♻️</span>
+            <span class="menu-texto">Aprender</span>
+        </button>
+        <button class="menu-btn" onclick="irJogo()" title="Jogo">
+            <span class="menu-icone">🎮</span>
+            <span class="menu-texto">Jogo</span>
+        </button>
+    </nav>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
